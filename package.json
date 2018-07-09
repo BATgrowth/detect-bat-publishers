@@ -1,7 +1,14 @@
 {
   "name": "detect-bat-publishers",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tool to detect Brave Browser publishers",
+  "keywords": [
+    "brave browser",
+    "detect",
+    "publishers",
+    "basic attention token"
+  ],
+  "homepage": "https://batgrowth.com",
   "main": "./src/lib.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
