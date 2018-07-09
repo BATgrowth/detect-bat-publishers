@@ -1,4 +1,4 @@
-# 
+# detect-bat-publishers
 A npm package used to detect Brave Browser / Basic Attention Token publishers using 3 different methods:
 - Brave API call (the most reliable way)
 - DNS lookup
