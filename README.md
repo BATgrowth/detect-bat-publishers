@@ -11,10 +11,16 @@ It was inspired by the following gist: https://gist.github.com/da2x/6e2ef4a30f47
 You can Download, unzip and parse to JSON the Alexa Top 1 Million websites .csv in order to have a decent data sample to try this package on:
 http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
 
+## Installation
+
+This module is installed via npm:
+
+```
+npm i detect-bat-publishers
+```
+
 ## Usage
 ```javascript
-
-npm i detect-bat-publishers
 
 let check = require('detect-bat-publishers');
 

@@ -1,6 +1,6 @@
 {
   "name": "detect-bat-publishers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tool to detect Brave Browser publishers",
   "keywords": [
     "brave browser",
