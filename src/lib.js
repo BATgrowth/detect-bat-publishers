@@ -3,7 +3,7 @@ var _ = require('underscore');
 const dns = require('dns');
 var rp = require('request-promise');
 
-let is_website_verified_by_dns_record = (website_url) => {
+let isWebsiteVerifiedByDnsRecord = (website_url) => {
   return new Promise((resolve, reject) => {
     return dns.resolve(website, 'TXT', function (err, records) {
       if (err) {
@@ -20,7 +20,7 @@ let is_website_verified_by_dns_record = (website_url) => {
   })
 }
 
-let is_website_verified_by_txt_verification_file = (website_url) => {
+let isWebsiteVerifiedByTxtVerificationFile = (website_url) => {
   return rp(website_url + '/.well-known/brave-payments-verification.txt')
     .then(function (res) {
       res = JSON.parse(res);
@@ -35,7 +35,7 @@ let is_website_verified_by_txt_verification_file = (website_url) => {
     });
 }
 
-let is_website_verified_by_brave_api_call = (website_url) => {
+let isWebsiteVerifiedByBraveApiCall = (website_url) => {
   return rp('https://mercury-proxy.privateinternetaccess.com/v3/publisher/identity?publisher=' + website_url)
     .then(function (res) {
       res = JSON.parse(res);
@@ -49,9 +49,9 @@ let is_website_verified_by_brave_api_call = (website_url) => {
 }
 
 const check = {
-  is_website_verified_by_dns_record,
-  is_website_verified_by_txt_verification_file,
-  is_website_verified_by_brave_api_call,
+  isWebsiteVerifiedByDnsRecord,
+  isWebsiteVerifiedByTxtVerificationFile,
+  isWebsiteVerifiedByBraveApiCall,
 }
 
 module.exports = check;

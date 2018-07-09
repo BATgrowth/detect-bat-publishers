@@ -2,10 +2,10 @@
   "name": "detect-bat-publishers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/lib.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --max_old_space_size=4096 index.js"
+    "start": "node --max_old_space_size=4096 ./src/lib.js"
   },
   "author": "",
   "license": "ISC",
