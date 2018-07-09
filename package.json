@@ -1,6 +1,6 @@
 {
   "name": "detect-bat-publishers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tool to detect Brave Browser publishers",
   "keywords": [
     "brave browser",
@@ -13,6 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --max_old_space_size=4096 ./src/lib.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BATgrowth/detect-bat-publishers.git"
   },
   "author": "",
   "license": "ISC",

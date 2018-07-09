@@ -1,5 +1,5 @@
 # 
-A npm package used to detect Brave Browser / Basic Attention Token publishers using a 3 different methods:
+A npm package used to detect Brave Browser / Basic Attention Token publishers using 3 different methods:
 - Brave API call (the most reliable way)
 - DNS lookup
 - Fetching brave-payments-verification.txt
@@ -17,12 +17,6 @@ http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
 npm i detect-bat-publishers
 
 let check = require('detect-bat-publishers');
-
-check = {
-  isWebsiteVerifiedByDnsRecord,
-  isWebsiteVerifiedByTxtVerificationFile,
-  isWebsiteVerifiedByBraveApiCall,
-}
 
 // Return a promise with true/false
 // Use a DNS lookup
