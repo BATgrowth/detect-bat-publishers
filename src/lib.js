@@ -5,8 +5,10 @@ var rp = require('request-promise');
 
 let isWebsiteVerifiedByDnsRecord = (website_url) => {
   return new Promise((resolve, reject) => {
-    return dns.resolve(website, 'TXT', function (err, records) {
-      if (err) {
+    return dns.resolve(website_url, 'TXT', function (err, records) {
+      if (err && err.code === 'ENODATA') {
+        return resolve(false);
+      } else if (err) {
         return reject(err);
       }
       records.forEach(element => {
@@ -21,10 +23,10 @@ let isWebsiteVerifiedByDnsRecord = (website_url) => {
 }
 
 let isWebsiteVerifiedByTxtVerificationFile = (website_url) => {
-  return rp(website_url + '/.well-known/brave-payments-verification.txt')
+  const url = 'https://' + website_url + '/.well-known/brave-payments-verification.txt';
+  return rp(url)
     .then(function (res) {
-      res = JSON.parse(res);
-      if (res.statusCode === '200') {
+      if (res.indexOf('This is a Brave Payments publisher verification file') != -1) {
         return true;
       } else {
         return false;

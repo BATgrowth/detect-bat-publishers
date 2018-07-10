@@ -1,6 +1,6 @@
 {
   "name": "detect-bat-publishers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tool to detect Brave Browser publishers",
   "keywords": [
     "brave browser",
@@ -11,7 +11,7 @@
   "homepage": "https://batgrowth.com",
   "main": "./src/lib.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 10000",
     "start": "node --max_old_space_size=4096 ./src/lib.js"
   },
   "repository": {
@@ -22,8 +22,11 @@
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.5.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
+    "tap": "^12.0.1",
     "underscore": "^1.9.1"
   }
 }
