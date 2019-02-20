@@ -1,6 +1,6 @@
 # detect-bat-publishers
 
-**DEPRECATED: I am now only relying on Brave official API to gather Brave publishers for batgrowth.com**, This endpoint basically: https://publishers.basicattentiontoken.org/api/v1/public/channels
+**DEPRECATED: I am now only relying on Brave official API to gather Brave publishers for batgrowth.com**
 
 A npm package used to detect Brave Browser / Basic Attention Token publishers using 3 different methods:
 - Brave API call (the most reliable way)
