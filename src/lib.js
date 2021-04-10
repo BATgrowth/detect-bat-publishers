@@ -14,10 +14,9 @@ let isWebsiteVerifiedByDnsRecord = (website_url) => {
       records.forEach(element => {
         if (element[0].indexOf('brave-ledger-verification=') !== -1) {
           return resolve(true);
-        } else {
-          return resolve(false);
         }
       });
+      return resolve(false);
     });
   })
 }
